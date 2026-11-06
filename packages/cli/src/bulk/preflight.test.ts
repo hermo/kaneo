@@ -43,6 +43,16 @@ describe("checkSameWorkspace", () => {
     ).toBe("w1");
   });
 
+  it("does not name a specific command in its hint", () => {
+    const result = checkSameWorkspace([
+      { workspaceId: "w1" },
+      { workspaceId: "w2" },
+    ]);
+    expect(Result.isFailure(result) && result.failure.hint).toBe(
+      "Run the command once per workspace.",
+    );
+  });
+
   it("refuses tasks from two workspaces, which the API rejects", () => {
     expect(
       Result.isFailure(

@@ -46,6 +46,7 @@ kaneo task list -p KAN --open --jq '.[] | select(.priority == "urgent") | .ticke
 kaneo task view KAN-12
 kaneo task create "Fix flaky login test" -p KAN --priority high --due tomorrow --label Bug --assignee me
 kaneo task status KAN-12 in-progress
+kaneo task reorder KAN-12 KAN-7 --after KAN-3
 kaneo task edit KAN-12 --priority urgent --add-label Bug
 kaneo task assign KAN-12 me
 kaneo task repeat KAN-12 weekly --on mon,thu --time-zone Europe/Madrid

@@ -50,7 +50,7 @@ export function checkSameWorkspace(
   return Result.fail(
     new InvalidArgument({
       message: "The tasks belong to more than one workspace.",
-      hint: "Run kaneo task bulk once per workspace.",
+      hint: "Run the command once per workspace.",
     }),
   );
 }

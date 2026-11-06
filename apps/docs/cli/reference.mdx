@@ -244,6 +244,14 @@ kaneo task move <task> [-p <project>] [-s <status>]
 
 Moves a task to another project. `-s`, `--status` picks the column in the destination project. By default the task keeps the same column, or goes to the first one.
 
+### `kaneo task reorder`
+
+```bash
+kaneo task reorder <task>... [--before <task> | --after <task>]
+```
+
+Moves tasks to the top of their column, in the order you list them. With `--before` or `--after` they go as a block next to that task instead. The other tasks keep their order. Kaneo updates only the tasks whose position has to change, the same as dragging them on the board. The tasks, and the `--before` or `--after` task, must all be in one column of one project. If someone else changes the board meanwhile, the command stops without changing anything, and you run it again. The web board shows this manual order when sorted by position.
+
 ### `kaneo task duplicate`
 
 ```bash

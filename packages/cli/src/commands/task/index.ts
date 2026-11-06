@@ -18,6 +18,7 @@ import { taskMine } from "./mine.js";
 import { taskMove } from "./move.js";
 import { taskOpen } from "./open.js";
 import { taskRelation } from "./relation.js";
+import { taskReorder } from "./reorder.js";
 import { taskRepeat } from "./repeat.js";
 import { taskStatus } from "./status.js";
 import { taskView } from "./view.js";
@@ -34,6 +35,7 @@ export const task = Command.make("task").pipe(
     taskOpen,
     taskStatus,
     taskMove,
+    taskReorder,
     taskDuplicate,
     taskBulk,
     taskAssign,
